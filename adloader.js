@@ -12,6 +12,8 @@ fetch(convertedJsonUrl)
 
 function afterConverted(){
     document.querySelector(".adimg").src = convertedJson.img
-    document.querySelector(".adurl").href = convertedJson.url
+    document.querySelector(".adurl").onclick = function(){
+        window.open(convertedJson.url);
+    }
     document.querySelector(".adreminder").style.display = "block"
 }
